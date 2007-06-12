@@ -3,7 +3,9 @@ package Data::ICal::TimeZone::Object::Africa::Gaborone;
 use strict;
 use base qw( Data::ICal::TimeZone::Object );
 
-__PACKAGE__->new->_load( join '', <DATA> );
+my $data = join '', <DATA>;
+close DATA;
+__PACKAGE__->new->_load( $data );
 
 1;
 __DATA__

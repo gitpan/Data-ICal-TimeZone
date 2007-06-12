@@ -164,6 +164,7 @@ sub zones {
         'America/Rankin_Inlet',
         'America/Recife',
         'America/Regina',
+        'America/Resolute',
         'America/Rio_Branco',
         'America/Santiago',
         'America/Santo_Domingo',

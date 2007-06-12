@@ -3,7 +3,9 @@ package Data::ICal::TimeZone::Object::Asia::Damascus;
 use strict;
 use base qw( Data::ICal::TimeZone::Object );
 
-__PACKAGE__->new->_load( join '', <DATA> );
+my $data = join '', <DATA>;
+close DATA;
+__PACKAGE__->new->_load( $data );
 
 1;
 __DATA__
@@ -17,8 +19,8 @@ BEGIN:DAYLIGHT
 TZOFFSETFROM:+0200
 TZOFFSETTO:+0300
 TZNAME:EEST
-DTSTART:19700401T000000
-RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+DTSTART:19700327T000000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1FR
 END:DAYLIGHT
 BEGIN:STANDARD
 TZOFFSETFROM:+0300
