@@ -4,7 +4,7 @@ use strict;
 use base qw( Data::ICal::TimeZone::Object );
 
 my $data = join '', <DATA>;
-close DATA;
+close DATA; # avoid leaking many many filehandles
 __PACKAGE__->new->_load( $data );
 
 1;
@@ -26,8 +26,8 @@ BEGIN:STANDARD
 TZOFFSETFROM:+1000
 TZOFFSETTO:+1000
 TZNAME:EST
-DTSTART:19700329T020000
-RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+DTSTART:19700405T020000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 END:VCALENDAR

@@ -4,7 +4,7 @@ use strict;
 use base qw( Data::ICal::TimeZone::Object );
 
 my $data = join '', <DATA>;
-close DATA;
+close DATA; # avoid leaking many many filehandles
 __PACKAGE__->new->_load( $data );
 
 1;

@@ -119,6 +119,7 @@ sub zones {
         'America/Indiana/Knox',
         'America/Indiana/Marengo',
         'America/Indiana/Petersburg',
+        'America/Indiana/Tell_City',
         'America/Indiana/Vevay',
         'America/Indiana/Vincennes',
         'America/Indiana/Winamac',
